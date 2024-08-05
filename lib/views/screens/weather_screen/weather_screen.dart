@@ -23,7 +23,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
         _weatherModel = WeatherModel;
       });
     }catch(e){
-      print("Error: ${e}");
     }
   }
 
@@ -37,7 +36,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Weather"),
+        title: const Text("Weather"),
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
