@@ -3,6 +3,7 @@ import 'package:weather_app_with_api/controller/weather_service.dart';
 import 'package:weather_app_with_api/model/weather_model.dart';
 
 class WeatherScreen extends StatefulWidget {
+
   const WeatherScreen({super.key});
 
   @override

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:weather_app_with_api/views/screens/weather_screen/weather_screen.dart';
 
 void main(){
+
   runApp(MyApp());
 }
 
