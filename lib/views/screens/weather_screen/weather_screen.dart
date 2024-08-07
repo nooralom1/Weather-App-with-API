@@ -10,20 +10,18 @@ class WeatherScreen extends StatefulWidget {
 }
 
 class _WeatherScreenState extends State<WeatherScreen> {
-
   final _weatherService = WeatherService('23474f85c62938615d08f2d30942d65e');
   WeatherModel? _weatherModel;
 
   _fetchWeather() async {
     String cityName = await _weatherService.getCurrentCity();
 
-    try{
+    try {
       final WeatherModel = await _weatherService.getWeatherModel(cityName);
       setState(() {
         _weatherModel = WeatherModel;
       });
-    }catch(e){
-    }
+    } catch (e) {}
   }
 
   @override
@@ -41,13 +39,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
         backgroundColor: Colors.blue,
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(_weatherModel?.cityNAme?? "loading city..."),
-            Text("${_weatherModel?.temperature.round()}+c"),
-          ]
-        ),
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Text(_weatherModel?.cityNAme ?? "loading city..."),
+          Text("${_weatherModel?.temperature.round()}+c"),
+        ]),
       ),
     );
   }

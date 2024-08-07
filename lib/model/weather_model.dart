@@ -3,8 +3,8 @@ class WeatherModel {
   final double temperature;
   final String mainCondition;
 
-  WeatherModel(
-      {required this.cityNAme,
+  WeatherModel({
+    required this.cityNAme,
       required this.temperature,
       required this.mainCondition});
 
